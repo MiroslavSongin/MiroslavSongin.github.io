@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--Стилизация страницы-->
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <!--Оптимизация размера экрана для мобильных телефонов-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Оптимизации с описанием страницы. Необходим для SEO -->
+    <meta name="description" content="Startup Team" />
+    <!-- <link rel="stylesheet" href="jquery.mCustomScrollbar.min.css" /> -->
+    <!-- ВАЖНОЕ ПРИМЕЧАНИЕ: сначала мы подключили общую библиотеку jq, потом библиотеку слайдера(и в конце документа тоже), дальше идут две ссылки для стилизации слайдера -->
+    <!-- подключаем jquery -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- плавная прокрутка -->
+    <!-- <script src="js/jquery.mCustomScrollbar.concat.min.js"></script> -->
+
+    <!-- slick slider -->
+    <script src="slick/slick.min.js"></script>
+    <!-- slider style.  -->
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- Бесплатные гугл-шрифты -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:600&display=swap" rel="stylesheet">
+    <title>Welcome to Startup</title>
+
+    <!--Иконка для вкладки сайта-->
+    <link rel="icon" href="img/fav.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/fav.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <!-- запуск плавной прокрутки -->
+    <!-- <script src="js/initial.js"></script> -->
+    <!-- svg sprite, исрользуем для иконок соцсетей  -->
+    <svg  style="display: none;">
+      <symbol id="facebook" viewBox="0 0 512 512">
+        <g>
+          <path
+            d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h151v-181h-60v-90h60v-61c0-49.628906 40.371094-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm0 0"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="github" viewBox="0 0 512 512">
+        <g>
+          <path
+            d="m256 0c-140.609375 0-256 115.390625-256 256 0 119.988281 84.195312 228.984375 196 256v-84.695312c-11.078125 2.425781-21.273438 2.496093-32.550781-.828126-15.128907-4.464843-27.421875-14.542968-36.546875-29.910156-5.816406-9.8125-16.125-20.453125-26.878906-19.671875l-2.636719-29.882812c23.253906-1.992188 43.371093 14.167969 55.3125 34.230469 5.304687 8.921874 11.410156 14.152343 19.246093 16.464843 7.574219 2.230469 15.707032 1.160157 25.183594-2.1875 2.378906-18.972656 11.070313-26.074219 17.636719-36.074219v-.015624c-66.679687-9.945313-93.253906-45.320313-103.800781-73.242188-13.976563-37.074219-6.476563-83.390625 18.238281-112.660156.480469-.570313 1.347656-2.0625 1.011719-3.105469-11.332032-34.230469 2.476562-62.546875 2.984375-65.550781 13.078125 3.867187 15.203125-3.890625 56.808593 21.386718l7.191407 4.320313c3.007812 1.792969 2.0625.769531 5.070312.542969 17.371094-4.71875 35.683594-7.324219 53.726563-7.558594 18.179687.234375 36.375 2.839844 54.464844 7.75l2.328124.234375c-.203124-.03125.632813-.148437 2.035157-.984375 51.972656-31.480469 50.105469-21.191406 64.042969-25.722656.503906 3.007812 14.128906 31.785156 2.917968 65.582031-1.511718 4.65625 45.058594 47.300781 19.246094 115.753906-10.546875 27.933594-37.117188 63.308594-103.796875 73.253907v.015624c8.546875 13.027344 18.816406 19.957032 18.761719 46.832032v105.722656c111.808594-27.015625 196-136.011719 196-256 .003906-140.609375-115.386719-256-255.996094-256zm0 0"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="linkedin" viewBox="0 0 512 512">
+        <g>
+          <path
+            d="m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h362c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm-256 406h-60v-210h60zm0-240h-60v-60h60zm210 240h-60v-120c0-16.539062-13.460938-30-30-30s-30 13.460938-30 30v120h-60v-210h60v11.308594c15.71875-4.886719 25.929688-11.308594 45-11.308594 40.691406.042969 75 36.546875 75 79.6875zm0 0"
+          />
+        </g>
+      </symbol>
+
+      <symbol id="twitter" viewBox="0 0 512 512">
+        <g>
+          <path
+            d="m191.011719 419.042969c-22.140625 0-44.929688-1.792969-67.855469-5.386719-40.378906-6.335938-81.253906-27.457031-92.820312-33.78125l-30.335938-16.585938 32.84375-10.800781c35.902344-11.804687 57.742188-19.128906 84.777344-30.597656-27.070313-13.109375-47.933594-36.691406-57.976563-67.175781l-7.640625-23.195313 6.265625.957031c-5.941406-5.988281-10.632812-12.066406-14.269531-17.59375-12.933594-19.644531-19.78125-43.648437-18.324219-64.21875l1.4375-20.246093 12.121094 4.695312c-5.113281-9.65625-8.808594-19.96875-10.980469-30.777343-5.292968-26.359376-.863281-54.363282 12.476563-78.851563l10.558593-19.382813 14.121094 16.960938c44.660156 53.648438 101.226563 85.472656 168.363282 94.789062-2.742188-18.902343-.6875-37.144531 6.113281-53.496093 7.917969-19.039063 22.003906-35.183594 40.722656-46.691407 20.789063-12.777343 46-18.96875 70.988281-17.433593 26.511719 1.628906 50.582032 11.5625 69.699219 28.746093 9.335937-2.425781 16.214844-5.015624 25.511719-8.515624 5.59375-2.105469 11.9375-4.496094 19.875-7.230469l29.25-10.078125-19.074219 54.476562c1.257813-.105468 2.554687-.195312 3.910156-.253906l31.234375-1.414062-18.460937 25.230468c-1.058594 1.445313-1.328125 1.855469-1.703125 2.421875-1.488282 2.242188-3.339844 5.03125-28.679688 38.867188-6.34375 8.472656-9.511718 19.507812-8.921875 31.078125 2.246094 43.96875-3.148437 83.75-16.042969 118.234375-12.195312 32.625-31.09375 60.617187-56.164062 83.199219-31.023438 27.9375-70.582031 47.066406-117.582031 56.847656-23.054688 4.796875-47.8125 7.203125-73.4375 7.203125zm0 0"
+          />
+        </g>
+      </symbol>
+    </svg>
+    <!-- Preloader script -->
+    <script src="js/preloader.js"></script>
+    <!-- preloader block -->
+    <div id="myPreloader" class="wrap-myLoader">
+      <div class="myLoader"></div>
+    </div>
+
+    <!-- header  -->
+    <header class="header" id="header">
+      <div class="container" >
+        <div class="header_inner" >
+          <a href="#" 
+            ><span class="logo" >
+              Startup
+            </span></a
+          >
+          <div class="burger" id="navToggle">
+            <span class="burger_item"></span>
+          </div>
+          <nav class="nav" id="nav">
+            <a href="#home" class="nav_link">Home</a>
+            <a href="#services" class="nav_link">Services</a>
+            <a href="#about" class="nav_link">About</a>
+            <a href="#works" class="nav_link">Works</a>
+            <a href="#blog" class="nav_link">Blog</a>
+            <a href="#clients" class="nav_link">Clients</a>
+            <a href="#contact" class="nav_link">Contact</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+<div class="anchor" id="home"></div>
+    <!-- intro -->
+    <div class="intro" id="intro">
+      <div class="container" >
+        <div class="intro_inner" >
+          <!-- интро иннер нужен чтобы контент не разбрасывало по всему контейнеру -->
+          <h1 class="intro_title">welcome to startup</h1>
+          <h2 class="intro_subtitle">
+            Your Favourite Creative Agency Template
+          </h2>
+          <a href="#" class="btn btn--glass"><span>get started</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- services -->
+    <div class="container">
+      <div class="services" id="services">
+        <div class="block_description">
+          <h4 class="title">
+            services
+          </h4>
+          <div class="line"></div>
+          <div class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+      </div>
+
+      <div class="services_inner" >
+
+        <div class="services_item">
+          <div class="svg_box">
+            <img src="svg/serv.svg" alt="" />
+          </div>
+          <div class="serv_title">rock solid code</div>
+          <div class="serv_subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+            suscipit debitis! Inventore explicabo nemo reprehenderit vitae quis
+            aspernatur nulla.
+          </div>
+        </div>
+
+        <div class="services_item">
+          <div class="svg_box">
+            <img src="svg/serv2.svg" alt="" />
+          </div>
+          <div class="serv_title">expert support</div>
+          <div class="serv_subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+            suscipit debitis! Inventore explicabo nemo reprehenderit vitae quis
+            aspernatur nulla.
+          </div>
+        </div>
+
+        <div class="services_item">
+          <div class="svg_box">
+            <img src="svg/serv3.svg" alt="" />
+          </div>
+          <div class="serv_title">clean typography</div>
+          <div class="serv_subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+            suscipit debitis! Inventore explicabo nemo reprehenderit vitae quis
+            aspernatur nulla.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ABOUT US -->
+    <div class="container">
+      <div class="about_us" id="about">
+        <div class="block_description">
+          <h4 class="title">
+            about us
+          </h4>
+          <div class="line"></div>
+          <div class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
+        <div class="about_text">
+          <div class="about_text_inner">
+            <div class="about_text_item">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Aspernatur placeat repellendus inventore, error est neque
+              molestias doloribus illo hic eveniet similique porro libero minima
+              ab dolore magnam, rerum esse qui.
+            </div>
+            <div class="about_text_item">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Aspernatur placeat repellendus inventore, error est neque
+              molestias doloribus illo hic eveniet similique porro libero minima
+              ab dolore magnam, rerum esse qui.
+            </div>
+          </div>
+        </div>
+        <!-- Слайдер -->
+
+        <div class="aslider_inner">
+          <div class="slider_main">
+            <div class="aslider_item">
+              <div class="team_photo_box">
+                <img src="img/team1.jpg" class="team_photo" alt="" />
+                <!-- ниже блок для ховер-имга -->
+                <div class="team_hover">
+                  <div class="social_box">
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#facebook"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#github"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#linkedin"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#twitter"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="team_title">shamim mia</div>
+              <div class="team_subtitle">Sr. Web Developer</div>
+            </div>
+
+            <div class="aslider_item">
+              <div class="team_photo_box">
+                <img src="img/team2.jpg" class="team_photo" alt="" />
+                <!-- ниже блок для ховер-имга -->
+                <div class="team_hover">
+                  <div class="social_box">
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#facebook"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#github"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#linkedin"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#twitter"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="team_title">John Doe</div>
+              <div class="team_subtitle">Front-end Developer</div>
+            </div>
+
+            <div class="aslider_item">
+              <div class="team_photo_box">
+                <img src="img/team3.jpg" class="team_photo" alt="" />
+                <!-- ниже блок для ховер-имга -->
+                <div class="team_hover">
+                  <div class="social_box">
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#facebook"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#github"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#linkedin"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#twitter"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="team_title">rubel miah</div>
+              <div class="team_subtitle">Lead WordPress Developer</div>
+            </div>
+
+            <div class="aslider_item">
+              <div class="team_photo_box">
+                <img src="img/team4.jpg" class="team_photo" alt="" />
+                <!-- ниже блок для ховер-имга -->
+                <div class="team_hover">
+                  <div class="social_box">
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#facebook"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#github"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#linkedin"></use>
+                      </svg>
+                    </a>
+
+                    <a href="#" class="social_svg_link">
+                      <svg class="social_icon">
+                        <use xlink:href="#twitter"></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="team_title">md. khalil uddin</div>
+              <div class="team_subtitle">Head of Ideas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- works -->
+    <div class="container">
+      <div class="works" id="works">
+        <div class="block_description">
+          <h4 class="title">
+            latest works
+          </h4>
+          <div class="line"></div>
+          <div class="subtitle">
+            <div class="works_types">
+              <a class="work_type" href="#">All</a
+              ><a class="work_type" href="#">Branding</a
+              ><a class="work_type" href="#">Design</a
+              ><a class="work_type" href="#">Development</a
+              ><a class="work_type" href="#">Strategy</a>
+            </div>
+          </div>
+        </div>
+        <!-- works preview -->
+        <div class="works_inner">
+          <div class="works_preview">
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works9.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works8.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works7.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works6.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works5.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works4.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works3.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works2.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+
+            <div class="works_item">
+              <div class="works_photo">
+                <img src="img/works1.jpg" class="works_photo" alt="" />
+              </div>
+              <div class="works_hover">
+                <h3 class="works_title">Our Project</h3>
+                <h4 class="works_subtitle">Web-Development</h4>
+                <a class="btn btn--glass" href="#"><span>view</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- parallax block -->
+    <div class="parallax">
+      <div class="parallax_hover">
+        <p class="parallax_text">
+          Do you like OUR WORK so far?<br />Let's talk about YOUR PROJECT!
+        </p>
+        <a href="#" class="btn btn--glass"><span>get in touch</span></a>
+      </div>
+    </div>
+    <!-- blog -->
+    <div class="container">
+      <div class="blog_inner" id="blog">
+        <div class="block_description">
+          <h4 class="title">
+            recent blog posts
+          </h4>
+          <div class="line"></div>
+          <div class="subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </div>
+        </div>
+
+        <div class="blog_item">
+          <div class="blog_photo">
+            <img src="img/blog1.jpg" class="blog_photo_img" alt="" />
+          </div>
+          <div class="blog_text">
+            <div class="art_head">
+              <div class="art_date">
+                <p><span>18</span><br /><span>oct</span></p>
+              </div>
+              <div class="art_name">
+                <span>startup ideas needs to be funded</span><br /><span
+                  >by Khali Uddin in Development</span
+                >
+              </div>
+            </div>
+            <div class="art_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              natus doloribus quidem id magnam nihil nesciunt suscipit possimus
+              quae, eveniet enim sequi deserunt ducimus quis ab! Nobis
+              consequuntur error ipsa? Possimus aliquid perspiciatis distinctio
+              quia dignissimos recusandae accusamus unde placeat a voluptate
+              dolorem amet dolores ex dicta deleniti, nisi, blanditiis
+              necessitatibus autem quod consequuntur cum ad id.
+            </div>
+
+            <a class="art_read" href="#">read more</a>
+          </div>
+        </div>
+
+        <div class="blog_item">
+          <div class="blog_photo">
+            <img src="img/blog2.jpg" class="blog_photo_img" alt="" />
+          </div>
+          <div class="blog_text">
+            <div class="art_head">
+              <div class="art_date">
+                <p><span>21</span><br /><span>oct</span></p>
+              </div>
+              <div class="art_name">
+                <span>user interface designing elements</span><br /><span
+                  >by Khali Uddin in Development</span
+                >
+              </div>
+            </div>
+            <div class="art_text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              natus doloribus quidem id magnam nihil nesciunt suscipit possimus
+              quae, eveniet enim sequi deserunt ducimus quis ab! Nobis
+              consequuntur error ipsa? Possimus aliquid perspiciatis distinctio
+              quia dignissimos recusandae accusamus unde placeat a voluptate
+              dolorem amet dolores ex dicta deleniti, nisi, blanditiis
+              necessitatibus autem quod consequuntur cum ad id.
+            </div>
+
+            <a class="art_read" href="#">read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- clients -->
+    <div class="clients_block" id="clients">
+      <div class="clients_inner">
+        <div class="clients_logo">
+          <img src="img/firm1.jpg" alt="" />
+          <img src="img/firm2.jpg" alt="" />
+          <img src="img/firm3.jpg" alt="" />
+          <img src="img/firm4.jpg" alt="" />
+          <img src="img/firm5.jpg" alt="" />
+        </div>
+        <div class="testimonials">
+          <div class="testimonials_item">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+              laboriosam ipsa neque officia. Fugiat tempora eligendi eum.
+            </p>
+            <p>John Doe, Google Inc.</p>
+          </div>
+
+          <div class="testimonials_item">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+              laboriosam ipsa neque officia. Fugiat tempora eligendi eum.
+            </p>
+            <p>John Doe, Google Inc.</p>
+          </div>
+
+          <div class="testimonials_item">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse
+              laboriosam ipsa neque officia. Fugiat tempora eligendi eum.
+            </p>
+            <p>John Doe, Google Inc.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CONTACT BLOCK -->
+<div class="container">
+<div class="contact_inner" id="contact"> 
+  <div class="block_description">
+    <h4 class="title">
+      get in touch
+    </h4>
+    <div class="line"></div>
+    <div class="subtitle">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+    </div>
+  </div>
+  <div class="information">
+  <div class="contact_info">
+    <div class="info ad"><p>address</p>312, 7th Ave, New York<br>101200 NY, United States of America</div>
+    <div class="info hot"><p>hotline 24x7</p>+650052300<br>+88 01723 511 340</div>
+    <div class="info em"><p>e-mail</p>shapedtheme@gmail.com<br>khalicode@gmail.com</div>
+  </div>
+  <form action="action_page.php">
+  <div class="contact_form">
+<div class="row">
+  <div>
+    <label for="fname"></label>
+    <input type="text" class="fname" name="firstname" placeholder="YOUR NAME">
+  </div>
+  <div>
+    <label for="fname"></label>
+    <input type="text" class="fname" name="email" placeholder="YOUR E-MAIL">
+  </div>
+</div>
+<div class="row">
+  <div>
+    <label for="fname"></label>
+    <input type="text" class="fname" name="subject" placeholder="YOUR SUBJECT">
+  </div>
+  <div>
+    <label for="fname"></label>
+    <input type="text" class="fname" name="company" placeholder="COMPANY NAME">
+  </div>
+</div>
+<div class="message">
+  <label for="subject"></label>
+  <textarea  class="message" name="subject" placeholder="WRITE YOUR MESSAGE" ></textarea>
+</div>
+<div class="send">
+  <div><input type="submit" value="SEND MESSAGE"></div>
+  <div><span style="color: #c0301c;">*</span>  We'll contact you as as possible. We don't reply on Monday</div>
+</div>
+  </div>
+</form>
+</div>
+</div>
+</div>
+<!-- footer -->
+<footer>
+  <div class="footer_inner">
+  <div class="footer_item">
+    <div class="footer_svg">
+        <a href="#" class="social_svg_link">
+          <svg class="footer_icon">
+            <use xlink:href="#facebook"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="social_svg_link">
+          <svg class="footer_icon">
+            <use xlink:href="#github"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="social_svg_link">
+          <svg class="footer_icon">
+            <use xlink:href="#linkedin"></use>
+          </svg>
+        </a>
+
+        <a href="#" class="social_svg_link">
+          <svg class="footer_icon">
+            <use xlink:href="#twitter"></use>
+          </svg>
+        </a>
+    </div>
+    <div class="footer_line"></div>
+    <p class="footer_text">&copy;2015 startup. designed by shapedtheme</p>
+  </div>
+</div>
+</footer>
+    <!-- js для шапки -->
+    <script src="js/header.js"></script>
+
+    <!-- js slider -->
+    <script src="slick/slick.min.js"></script>
+    <!-- этот файл запускает слайдер -->
+    <script src="js/slick_start.js"></script>
+  </body>
+</html>
