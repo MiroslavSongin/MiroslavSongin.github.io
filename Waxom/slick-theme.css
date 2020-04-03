@@ -203,11 +203,15 @@
 
 @media (max-width: 575.98px) {
   .slick-prev {
-    display: none;
+    top: 70%;
+    left: 0;
+    z-index: 3;
   }
 
   .slick-next {
-    display: none;
+    top: 70%;
+    right: 0;
+    z-index: 3;
   }
 }
 
